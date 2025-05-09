@@ -1,16 +1,11 @@
 
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 
 export const HeroSection = () => {
   return (
     <section className="bg-gradient-to-r from-gray-900 to-gray-950 py-16">
       <div className="container mx-auto px-4 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="opacity-0 animate-[fadeIn_0.5s_ease-in_forwards]">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Откройте мир <span className="text-purple-500">кейсов CS2</span></h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
             Исследуйте все доступные кейсы Counter-Strike 2 и их содержимое в одном месте
@@ -23,7 +18,7 @@ export const HeroSection = () => {
               Новинки
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

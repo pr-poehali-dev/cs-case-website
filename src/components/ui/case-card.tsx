@@ -1,7 +1,6 @@
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 
 export interface CaseItem {
   id: number;
@@ -21,15 +20,8 @@ export const CaseCard = ({ caseItem }: { caseItem: CaseItem }) => {
   const rarityColor = rarityColors[caseItem.rarity];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      whileHover={{ 
-        scale: 1.05, 
-        boxShadow: "0 20px 30px rgba(0, 0, 0, 0.15)" 
-      }}
-      className="flex flex-col"
+    <div
+      className="flex flex-col transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
     >
       <Card className="overflow-hidden bg-gray-900 border-0 relative">
         <div className={`h-1 w-full ${rarityColor}`} />
@@ -50,6 +42,6 @@ export const CaseCard = ({ caseItem }: { caseItem: CaseItem }) => {
           </div>
         </div>
       </Card>
-    </motion.div>
+    </div>
   );
 };
