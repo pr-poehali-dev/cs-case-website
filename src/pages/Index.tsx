@@ -8,7 +8,7 @@ import { caseData } from "@/data/case-data";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
+    <div className="min-h-screen bg-black text-white">
       <Navbar />
 
       <main>

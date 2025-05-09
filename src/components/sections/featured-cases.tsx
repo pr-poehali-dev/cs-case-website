@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { CaseCard, CaseItem } from "@/components/ui/case-card";
@@ -13,7 +12,10 @@ export const FeaturedCases = ({ caseItems }: FeaturedCasesProps) => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl font-bold">Популярные кейсы</h2>
-          <Button variant="link" className="text-purple-400">
+          <Button
+            variant="link"
+            className="text-orange-400 hover:text-orange-500"
+          >
             Смотреть все <Icon name="ChevronRight" />
           </Button>
         </div>
